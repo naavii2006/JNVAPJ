@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #f4f7fb);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-box {
+      background: white;
+      padding: 40px 50px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h2 {
+      color: #00796b;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px 15px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #004d40;
+    }
+
+    #msg {
+      color: red;
+      margin-top: 10px;
+    }
+
+    /* Toast styling */
+    .toast {
+      visibility: hidden;
+      min-width: 250px;
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      border-radius: 8px;
+      padding: 12px 20px;
+      position: fixed;
+      z-index: 1000;
+      top: 30px;
+      right: 30px;
+      font-size: 17px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      transition: opacity 0.5s, top 0.5s;
+    }
+
+    .toast.show {
+      visibility: visible;
+      opacity: 1;
+      top: 50px;
+    }
+
+    #logout-toast {
+      background-color: #f44336; /* red for logout */
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username" required><br>
+    <input type="password" id="password" placeholder="Password" required><br>
+    <button onclick="login()">Login</button>
+    <p id="msg"></p>
+  </div>
+
+  <!-- Toast messages -->
+  <div id="login-toast" class="toast">✅ Login successful! Welcome back.</div>
+  <div id="logout-toast" class="toast">🚪 You have been logged out.</div>
+
+  <script>
+    const users = [
+  { username: "abhinav", password: "abhinav" },
+  { username: "aditya", password: "aditya" },
+  { username: "ajay", password: "ajay" },
+  { username: "ajinkya", password: "ajinkya" },
+  { username: "akanksha", password: "akanksha" },
+  { username: "akash", password: "akash" },
+  { username: "akshara", password: "akshara" },
+  { username: "aishwarya", password: "aishwarya" },
+  { username: "amol", password: "amol" },
+  { username: "aniket", password: "aniket" },
+  { username: "archana", password: "archana" },
+  { username: "ashish", password: "ashish" },
+  { username: "ashwini", password: "ashwini" },
+  { username: "avinash", password: "avinash" },
+  { username: "bhagwan", password: "bhagwan" },
+  { username: "dhananjay", password: "dhananjay" },
+  { username: "dhanashree", password: "dhanashree" },
+  { username: "dhiraj", password: "dhiraj" },
+  { username: "ganesh", password: "ganesh" },
+  { username: "gayatri", password: "gayatri" },
+  { username: "harshad", password: "harshad" },
+  { username: "ishwari", password: "ishwari" },
+  { username: "kalyan", password: "kalyan" },
+  { username: "kalyan", password: "kalyan" },
+  { username: "karuna", password: "karuna" },
+  { username: "karan", password: "karan" },
+  { username: "karan", password: "karan" },
+  { username: "khushi", password: "khushi" },
+  { username: "komal", password: "komal" },
+  { username: "madhusudan", password: "madhusudan" },
+  { username: "mahesh", password: "mahesh" },
+  { username: "mayur", password: "mayur" },
+  { username: "mayur", password: "mayur" },
+  { username: "misbah", password: "misbah" },
+  { username: "nikita", password: "nikita" },
+  { username: "nikita", password: "nikita" },
+  { username: "om", password: "om" },
+  { username: "om", password: "om" },
+  { username: "om", password: "om" },
+  { username: "om", password: "om" },
+  { username: "prajakta", password: "prajakta" },
+  { username: "prasad", password: "prasad" },
+  { username: "pratibha", password: "pratibha" },
+  { username: "prem", password: "prem" },
+  { username: "purva", password: "purva" },
+  { username: "rashi", password: "rashi" },
+  { username: "ritesh", password: "ritesh" },
+  { username: "rohit", password: "rohit" },
+  { username: "rutuja", password: "rutuja" },
+  { username: "rutuja", password: "rutuja" },
+  { username: "rutuja", password: "rutuja" },
+  { username: "sadanand", password: "sadanand" },
+  { username: "sakshi", password: "sakshi" },
+  { username: "samarth", password: "samarth" },
+  { username: "sanjana", password: "sanjana" },
+  { username: "sandhya", password: "sandhya" },
+  { username: "satwik", password: "satwik" },
+  { username: "satwik", password: "satwik" },
+  { username: "sayli", password: "sayli" },
+  { username: "shivam", password: "shivam" },
+  { username: "shraddha", password: "shraddha" },
+  { username: "shraddha", password: "shraddha" },
+  { username: "shruti", password: "shruti" },
+  { username: "shubham", password: "shubham" },
+  { username: "shubham", password: "shubham" },
+  { username: "shubham", password: "shubham" },
+  { username: "sneha", password: "sneha" },
+  { username: "somesh", password: "somesh" },
+  { username: "sudarshan", password: "sudarshan" },
+  { username: "suraj", password: "suraj" },
+  { username: "swapnil", password: "swapnil" },
+  { username: "tanmay", password: "tanmay" },
+  { username: "vaishnavi", password: "vaishnavi" },
+  { username: "vaishnavi", password: "vaishnavi" },
+  { username: "vijay", password: "vijay" },
+  { username: "vijay", password: "vijay" },
+  { username: "vinay", password: "vinay" },
+  { username: "vinit", password: "vinit" },
+  { username: "virendra", password: "virendra" },
+  { username: "vishal", password: "vishal" },
+  { username: "vishal", password: "vishal" },
+  { username: "vishnu", password: "vishnu" },
+  { username: "zahed", password: "zahed" }
+];
+
+
+    function login() {
+      const u = document.getElementById("username").value.trim().toLowerCase();
+      const p = document.getElementById("password").value.trim().toLowerCase();
+
+      const valid = users.find(user => user.username === u && user.password === p);
+
+      if (valid) {
+        sessionStorage.setItem("authenticated", "true");
+        showToast("login-toast");
+        setTimeout(() => {
+          window.open("main.html", "_blank");
+        }, 2000);
+      } else {
+        document.getElementById("msg").innerText = "❌ Invalid credentials";
+      }
+    }
+
+    function showToast(id) {
+      const toast = document.getElementById(id);
+      toast.classList.add("show");
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 3000);
+    }
+
+    // Check if redirected after logout
+    window.addEventListener("DOMContentLoaded", () => {
+      if (localStorage.getItem("justLoggedOut") === "true") {
+        showToast("logout-toast");
+        localStorage.removeItem("justLoggedOut");
+      }
+    });
+  </script>
+</body>
+</html>

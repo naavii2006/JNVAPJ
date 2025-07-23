@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JNV Jalna - Class Of '24</title>
+    <link rel="stylesheet" href="p.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+      body {
+    font-family: 'Special Elite', cursive;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #e0f7fa, #f4f7fb);
+    font-size: 20px;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-padding-top: 80px;
+    scroll-behavior: smooth;
+}
+
+/* ======= HEADER ======= */
+.main-header {
+    background: linear-gradient(to right, #168e70, #20c997);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border-bottom: 4px solid #0c5b45;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.header-content img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: white;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.header-content h1 {
+    margin: 0;
+    font-size: 32px;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+}
+
+.header-content p {
+    font-size: 25px;
+    font-weight: 300;
+    margin: 5px 0 0;
+    font-style: italic;
+}
+
+/* ======= PROFESSIONAL NAVBAR ======= */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f9f6ee, #e8f0ff);
+    }
+
+    nav {
+      background-color: #ffffffcc;
+      backdrop-filter: blur(10px);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-radius: 0 0 20px 20px;
+    }
+
+    .logo {
+      font-family: 'Great Vibes', cursive;
+      font-size: 32px;
+      color: #d94f4f;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      padding: 8px 15px;
+      border: 2px solid transparent;
+      border-radius: 10px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .nav-links li a:hover {
+      color: #ff6f61;
+      border-color: #ff6f61;
+      background-color: #ffeceb;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-top: 10px;
+      }
+    }
+
+
+.symbol {
+    max-width: 1000px;
+    height: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #fff7ed, #fbe9e7);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    /* Center content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: #333;
+    transition: 0.3s ease;
+}
+
+.symbol:hover {
+    transform: scale(1.01);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.school {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #fffaf0, #f5f5dc);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+    overflow: hidden;
+}
+
+.school img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+
+/* ======= NAME SECTION ======= */
+.name-section {
+    background: linear-gradient(to right, #e0f7fa, #f4f7fb);
+    padding: 50px 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.name-section h2 {
+    font-size: 32px;
+    color: #1E3A8A;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.name-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* ======= FLIP CARD ======= */
+.flip-card {
+    background: transparent;
+    width: 150px;
+    height: 100px;
+    perspective: 1000px;
+}
+
+.flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.flip-front {
+    background-color: #f0f8ff;
+    color: #222;
+    border: 2px solid #ccc;
+}
+
+.flip-back {
+    transform: rotateY(180deg);
+    color: white;
+}
+
+.flip-card[data-house="Aravli"] .flip-back {
+    background-color: skyblue;
+}
+.flip-card[data-house="Nilgiri"] .flip-back {
+    background-color: green;
+}
+.flip-card[data-house="Shiwalik"] .flip-back {
+    background-color: red;
+}
+.flip-card[data-house="Udaygiri"] .flip-back {
+    background-color: goldenrod;
+}
+
+/* ======= GALLERY ======= */
+.gallery {
+    width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fffbe6;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 50%;
+    opacity: 0.6;
+}
+
+#gallery-prev { left: 10px; }
+#gallery-next { right: 10px; }
+
+.arrow:hover { opacity: 1; }
+
+/* ======= VIDEO SECTION ======= */
+.video-section {
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgb(197, 209, 91);
+    box-shadow: 0 0 10px rgba(224, 9, 9, 0.1);
+    border-radius: 20px;
+}
+
+.video-section iframe {
+    max-width: 90%;
+    border-radius: 12px;
+}
+
+/* ======= CHATBOX ======= */
+.guestbook-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.guestbook-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+#guestbook-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#guestbook-form input,
+#guestbook-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#guestbook-form button {
+    padding: 10px;
+    background-color: #1c1c1c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#guestbook-form button:hover {
+    background-color: #444;
+}
+
+.guestbook-messages {
+    margin-top: 30px;
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.guestbook-message {
+    background: #e8e8e8;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+}
+
+.guestbook-message strong {
+    color: #2c3e50;
+}
+
+/* ======= FOOTER ======= */
+.site-footer {
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    color: #f8f8f8;
+    padding: 30px 20px 15px;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.5);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    gap: 30px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #ffd700;
+    border-bottom: 2px solid #ffd700;
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+.footer-section p,
+.footer-section li {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #e0e0e0;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #ffd700;
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #888;
+    margin-top: 20px;
+    padding-top: 10px;
+    font-size: 13px;
+    color: #ccc;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+}
+
+/* ======= POLL / QUESTION SECTION ======= */
+.poll-container {
+    background: linear-gradient(135deg, #111, #1a1a1a);
+    color: #fff;
+    width: 350px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,255,255,0.2);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.poll-container h2 {
+    color: #00e5ff;
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+
+.poll-container p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.poll-container label {
+    display: block;
+    margin: 12px 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.poll-container input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+    accent-color: #00e5ff;
+}
+
+.poll-container button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #00e5ff;
+    color: #000;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.poll-container button:hover {
+    background-color: #00bcd4;
+}
+
+#voteResult {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #76ff03;
+    font-size: 18px;
+    white-space: pre-line;
+}
+
+
+.video-section {
+    text-align: center;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(to right, #e0f7fa, #c2e9fb);
+
+    box-shadow: 0 0 10px rgba(224, 9, 9, 0.1);
+    border-radius: 20px;
+}
+
+.video-section video {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+#logout-btn {
+  padding: 8px 16px;
+  background-color: #ff4d4d; /* Red shade */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-left: 20px; /* spacing from nav items */
+}
+
+#logout-btn:hover {
+  background-color: #e60000;
+  transform: scale(1.05);
+}
+
+#logout-btn:active {
+  transform: scale(0.95);
+}
+
+  </style>
+  <script>
+    // Block direct access
+    if (sessionStorage.getItem("authenticated") !== "true") {
+      alert("❌ Access Denied. Please login first.");
+      window.close();
+    }
+  </script>
+</head>
+<body>
+
+
+
+<section id="home">
+    <header class="main-header">
+  <div class="header-content">
+    <img src="https://upload.wikimedia.org/wikipedia/en/8/82/Jawahar_Navodaya_Vidyalaya_logo.png" alt="JNV Logo">
+    <h1>Jawahar Navodaya Vidyalaya, Jalna</h1>
+    <p>Class of 2024 | Batch 2017–24</p>
+  </div>
+    </header>
+  </section>
+
+
+
+<nav>
+    <div class="logo">JNV Jalna</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#galary">Gallery</a></li>
+      <li><a href="#memory-video">Memories</a></li>
+      <li><a href="#guest">Suggestion Box</a></li>
+      <li><a href="#contact">About Us</a></li>
+      <li><a href="login.html" id="logout-btn">Logout</a></li>
+    </ul>
+  </nav>
+
+
+
+
+
+  <div class="symbol">
+      <img src="https://upload.wikimedia.org/wikipedia/en/8/82/Jawahar_Navodaya_Vidyalaya_logo.png">
+  </div>
+
+
+
+<div class="name-section">
+<h2>Our Classmates – Batch 2017–24</h2>
+<div class="name-grid">
+  <div class="flip-card" data-house="Udaygiri">
+    <div class="flip-inner">
+      <div class="flip-front">Abhinav</div>
+      <div class="flip-back">Udaygiri</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Udaygiri">
+    <div class="flip-inner">
+      <div class="flip-front">Aditya</div>
+      <div class="flip-back">Udaygiri</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Nilgiri">
+    <div class="flip-inner">
+      <div class="flip-front">Ajay</div>
+      <div class="flip-back">Nilgiri</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Aravli">
+    <div class="flip-inner">
+      <div class="flip-front">Ajinkya</div>
+      <div class="flip-back">Arawali</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Shiwalik">
+    <div class="flip-inner">
+      <div class="flip-front">Akanksha</div>
+      <div class="flip-back">Shiwalik</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Shiwalik">
+    <div class="flip-inner">
+      <div class="flip-front">Akash</div>
+      <div class="flip-back">Shiwalik</div>
+    </div>
+  </div>
+    <div class="flip-card" data-house="Nilgiri">
+    <div class="flip-inner">
+      <div class="flip-front">Akshara</div>
+      <div class="flip-back">Nilgiri</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Udaygiri">
+    <div class="flip-inner">
+      <div class="flip-front">Aishwarya</div>
+      <div class="flip-back"> Udaygiri</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Udaygiri">
+    <div class="flip-inner">
+      <div class="flip-front">Amol</div>
+      <div class="flip-back">Udaygiri</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Nilgiri">
+    <div class="flip-inner">
+      <div class="flip-front">Aniket</div>
+      <div class="flip-back">Nilgiri</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Nilgiri">
+    <div class="flip-inner">
+      <div class="flip-front">Archana</div>
+      <div class="flip-back">Nilgiri</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Nilgiri">
+    <div class="flip-inner">
+      <div class="flip-front">Ashish</div>
+      <div class="flip-back">Nilgiri </div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Udaygiri">
+    <div class="flip-inner">
+      <div class="flip-front">Ashwini</div>
+      <div class="flip-back">Udaygiri </div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Shiwalik">
+    <div class="flip-inner">
+      <div class="flip-front">Avinash</div>
+      <div class="flip-back">Shiwalik </div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Shiwalik">
+    <div class="flip-inner">
+      <div class="flip-front">Bhagwan</div>
+      <div class="flip-back">Shiwalik</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Aravli">
+    <div class="flip-inner">
+      <div class="flip-front">Dhananjay</div>
+      <div class="flip-back">Arawali</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Aravli">
+    <div class="flip-inner">
+      <div class="flip-front">Dhanashree</div>
+      <div class="flip-back">Arawali</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Shiwalik">
+    <div class="flip-inner">
+      <div class="flip-front">Dhiraj</div>
+      <div class="flip-back">Shiwalik</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Aravli">
+    <div class="flip-inner">
+      <div class="flip-front">Ganesh</div>
+      <div class="flip-back">Arawali</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Nilgiri">
+    <div class="flip-inner">
+      <div class="flip-front">Gayatri</div>
+      <div class="flip-back">Nilgiri </div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Nilgiri">
+    <div class="flip-inner">
+      <div class="flip-front">Harshad</div>
+      <div class="flip-back">Nilgiri</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Udaygiri">
+    <div class="flip-inner">
+      <div class="flip-front">Ishwari</div>
+      <div class="flip-back">Udaygiri</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Udaygiri">
+    <div class="flip-inner">
+      <div class="flip-front">Kalyan G</div>
+      <div class="flip-back">Udaygiri</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Shiwalik">
+    <div class="flip-inner">
+      <div class="flip-front">Kalyan P</div>
+      <div class="flip-back">Shiwalik </div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Aravli">
+    <div class="flip-inner">
+      <div class="flip-front">Karuna</div>
+      <div class="flip-back">Arawali</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Udaygiri">
+    <div class="flip-inner">
+      <div class="flip-front">Karan B</div>
+      <div class="flip-back">Udaygiri</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Aravli">
+    <div class="flip-inner">
+      <div class="flip-front">Karan T</div>
+      <div class="flip-back">Arawali</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Aravli">
+    <div class="flip-inner">
+      <div class="flip-front">Khushi</div>
+      <div class="flip-back">Arawali</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Aravli">
+    <div class="flip-inner">
+      <div class="flip-front">Komal</div>
+      <div class="flip-back">Arawali</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Udaygiri">
+    <div class="flip-inner">
+      <div class="flip-front">Madhusudan</div>
+      <div class="flip-back">Udaygiri</div>
+    </div>
+  </div>
+    <div class="flip-card" data-house="Udaygiri">
+        <div class="flip-inner">
+          <div class="flip-front">Mahesh</div>
+          <div class="flip-back">Udaygiri</div>
+    </div>
+  </div>
+    
+  <div class="flip-card" data-house="Aravli">
+    <div class="flip-inner">
+      <div class="flip-front">Mayur J</div>
+      <div class="flip-back">Arawali</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Nilgiri">
+    <div class="flip-inner">
+      <div class="flip-front">Mayur Y</div>
+      <div class="flip-back">Nilgiri</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Udaygiri">
+    <div class="flip-inner">
+      <div class="flip-front">Misbah</div>
+      <div class="flip-back">Udaygiri</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Aravli">
+    <div class="flip-inner">
+      <div class="flip-front">Nikita B</div>
+      <div class="flip-back">Arawali</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Udaygiri">
+    <div class="flip-inner">
+      <div class="flip-front">Nikita P</div>
+      <div class="flip-back">Udaygiri </div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Nilgiri">
+    <div class="flip-inner">
+      <div class="flip-front">Om B</div>
+      <div class="flip-back">Nilgiri</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Aravli">
+    <div class="flip-inner">
+      <div class="flip-front">Om M</div>
+      <div class="flip-back">Arawali</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Nilgiri">
+    <div class="flip-inner">
+      <div class="flip-front">Om S</div>
+      <div class="flip-back">Nilgiri </div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Shiwalik">
+    <div class="flip-inner">
+      <div class="flip-front">Om W</div>
+      <div class="flip-back">Shiwalik</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Shiwalik">
+    <div class="flip-inner">
+      <div class="flip-front">Prajakta</div>
+      <div class="flip-back">Shiwalik</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Aravli">
+    <div class="flip-inner">
+      <div class="flip-front">Prasad</div>
+      <div class="flip-back">Arawali</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Shiwalik">
+    <div class="flip-inner">
+      <div class="flip-front">Pratibha</div>
+      <div class="flip-back">Shiwalik</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Shiwalik">
+    <div class="flip-inner">
+      <div class="flip-front">Prem</div>
+      <div class="flip-back">Shiwalik </div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Nilgiri">
+    <div class="flip-inner">
+      <div class="flip-front">Purva</div>
+      <div class="flip-back">Nilgiri</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Udaygiri">
+    <div class="flip-inner">
+      <div class="flip-front">Rashi</div>
+      <div class="flip-back">Udaygiri</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Aravli">
+    <div class="flip-inner">
+      <div class="flip-front">Ritesh</div>
+      <div class="flip-back">Arawali</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Aravli">
+    <div class="flip-inner">
+      <div class="flip-front">Rohit</div>
+      <div class="flip-back">Arawali</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Aravli">
+    <div class="flip-inner">
+      <div class="flip-front">Rutuja B</div>
+      <div class="flip-back">Arawali</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Nilgiri">
+    <div class="flip-inner">
+      <div class="flip-front">Rutuja K</div>
+      <div class="flip-back">Nilgiri</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Nilgiri">
+    <div class="flip-inner">
+      <div class="flip-front">Rutuja S</div>
+      <div class="flip-back">Nilgiri </div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Shiwalik">
+    <div class="flip-inner">
+      <div class="flip-front">Sadanand</div>
+      <div class="flip-back">Shiwalik</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Aravli">
+    <div class="flip-inner">
+      <div class="flip-front">Sakshi</div>
+      <div class="flip-back">Arawali</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Nilgiri">
+    <div class="flip-inner">
+      <div class="flip-front">Samarth</div>
+      <div class="flip-back">Nilgiri</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Shiwalik">
+    <div class="flip-inner">
+      <div class="flip-front">Sanjana</div>
+      <div class="flip-back">Shiwalik</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Shiwalik">
+    <div class="flip-inner">
+      <div class="flip-front">Sandhya</div>
+      <div class="flip-back">Shiwalik</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Shiwalik">
+    <div class="flip-inner">
+      <div class="flip-front">Satwik K</div>
+      <div class="flip-back">Shiwalik</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Udaygiri">
+    <div class="flip-inner">
+      <div class="flip-front">Satwik L</div>
+      <div class="flip-back">Udaygiri </div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Aravli">
+    <div class="flip-inner">
+      <div class="flip-front">Sayli</div>
+      <div class="flip-back">Arawali</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Nilgiri">
+    <div class="flip-inner">
+      <div class="flip-front">Shivam</div>
+      <div class="flip-back">Nilgiri</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Nilgiri">
+    <div class="flip-inner">
+      <div class="flip-front">Shraddha M</div>
+      <div class="flip-back">Nilgiri </div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Aravli">
+    <div class="flip-inner">
+      <div class="flip-front">Shraddha T</div>
+      <div class="flip-back">Arawali</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Aravli">
+    <div class="flip-inner">
+      <div class="flip-front">Shruti</div>
+      <div class="flip-back">Arawali</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Aravli">
+    <div class="flip-inner">
+      <div class="flip-front">Shubham D</div>
+      <div class="flip-back">Arawali</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Nilgiri">
+    <div class="flip-inner">
+      <div class="flip-front">Shubham K</div>
+      <div class="flip-back">Nilgiri</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Aravli">
+    <div class="flip-inner">
+      <div class="flip-front">Shubham S</div>
+      <div class="flip-back">Arawali</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Aravli">
+    <div class="flip-inner">
+      <div class="flip-front">Sneha</div>
+      <div class="flip-back">Arawali</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Shiwalik">
+    <div class="flip-inner">
+      <div class="flip-front">Somesh</div>
+      <div class="flip-back">Shiwalik</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Shiwalik">
+    <div class="flip-inner">
+      <div class="flip-front">Sudarshan</div>
+      <div class="flip-back">Shiwalik</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Udaygiri">
+    <div class="flip-inner">
+      <div class="flip-front">Suraj</div>
+      <div class="flip-back">Udaygiri</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Shiwalik">
+    <div class="flip-inner">
+      <div class="flip-front">Swapnil</div>
+      <div class="flip-back">Shiwalik</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Nilgiri">
+    <div class="flip-inner">
+      <div class="flip-front">Tanmay</div>
+      <div class="flip-back">Nilgiri </div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Shiwalik">
+    <div class="flip-inner">
+      <div class="flip-front">Vaishnavi A</div>
+      <div class="flip-back">Shiwalik</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Nilgiri">
+    <div class="flip-inner">
+      <div class="flip-front">Vaishnavi R</div>
+      <div class="flip-back">Nilgiri</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Udaygiri">
+    <div class="flip-inner">
+      <div class="flip-front">Vijay M</div>
+      <div class="flip-back">Udaygiri</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Shiwalik">
+    <div class="flip-inner">
+      <div class="flip-front">Vijay P</div>
+      <div class="flip-back">Shiwalik</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Aravli">
+    <div class="flip-inner">
+      <div class="flip-front">Vinay</div>
+      <div class="flip-back">Arawali</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Aravli">
+    <div class="flip-inner">
+      <div class="flip-front">Vinit</div>
+      <div class="flip-back">Arawali</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Aravli">
+    <div class="flip-inner">
+      <div class="flip-front">Virendra</div>
+      <div class="flip-back">Arawali</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Nilgiri">
+    <div class="flip-inner">
+      <div class="flip-front">Vishal I</div>
+      <div class="flip-back">Nilgiri</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Nilgiri">
+    <div class="flip-inner">
+      <div class="flip-front">Vishal P</div>
+      <div class="flip-back">Nilgiri</div>
+    </div>
+  </div>
+    <div class="flip-card" data-house="Shiwalik">
+    <div class="flip-inner">
+      <div class="flip-front">Vishnu</div>
+      <div class="flip-back">Shiwalik</div>
+    </div>
+  </div>
+  <div class="flip-card" data-house="Shiwalik">
+    <div class="flip-inner">
+      <div class="flip-front">Zahed</div>
+      <div class="flip-back">Shiwalik</div>
+    </div>
+  </div>
+</div>
+</div>
+  
+</div>
+
+
+             
+        <div class="school">
+            <h2 style="text-align: center;">JNV Jalna</h2>
+            <p>Jawahar Navodaya Vidyalaya, Jalna is a prestigious school known for its academic excellence and extracurricular activities.</p>
+            <img src="navodaya.jpj.jpg" class="new" alt="jnv Jalna">
+        </div>
+    
+
+
+
+
+<section id="galary">
+  <div class="gallery">
+  <h2 style="text-align: center;">Photo Gallery</h2>
+  <div class="slider-wrapper" id="gallery-slider">
+    <button class="arrow" id="gallery-prev">&#10094;</button>
+
+    <div class="slider">
+      <div class="slider-track" id="gallery-track">
+        <img src="1.jpg" class="slide" alt="Image 1">
+        <img src="2.jpg" class="slide" alt="Image 2">
+        <img src="3.jpg" class="slide" alt="Image 3">
+        <img src="4.jpg" class="slide" alt="Image 4 ">
+        <img src="5.jpg" class="slide" alt="Image 5">
+        <img src="6.jpg" class="slide" alt="Image 6">
+        <img src="7.jpg" class="slide" alt="Image 7">
+        <img src="8.jpg" class="slide" alt="Image 8">
+        <img src="9.jpg" class="slide" alt="Image 9">
+        <img src="10.jpg" class="slide" alt="Image 10">
+        <img src="11.jpg" class="slide" alt="Image 11">
+        <img src="12.jpg" class="slide" alt="Image 12">
+        <img src="13.jpg" class="slide" alt="Image 13">
+        <img src="14.jpg" class="slide" alt="Image 14">
+        <img src="batch.jpg" class="slide" alt="Image 15">
+        
+      </div>
+    </div>
+
+    <button class="arrow" id="gallery-next">&#10095;</button>
+  </div>
+</div>
+
+</section>
+
+
+<section class="video-section" id="memory-video">
+  <h2>🎥 School Memories</h2>
+  <p style="font-size: 18px; color: #333;">Click to relive the moments from our journey</p>
+
+  <video autoplay muted playsinline loop controls width="100%" style="border-radius: 12px;">
+    <source src="memories.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</section>
+
+
+
+
+
+
+<section id="guest">
+<section class="guestbook-section">
+  <h2>📖 Guestbook – Share Your Thoughts!</h2>
+  <form id="guestbook-form">
+    <input type="text" id="guest-name" placeholder="Your Name" required>
+    <textarea id="guest-message" placeholder="Your Message" rows="4" required></textarea>
+    <button type="submit">Post Message</button>
+  </form>
+
+  <div class="guestbook-messages" id="guestbook-messages">
+    <!-- Messages will appear here -->
+  </div>
+</section>
+</section>
+
+
+
+
+<div class="poll-container">
+  <h2>Vote Now!</h2>
+  <p>Which features should we add to our website?</p>
+
+  <form id="pollForm">
+    <label><input type="checkbox" name="feature" value="Dark Mode"> Dark Mode</label>
+    <label><input type="checkbox" name="feature" value="Live Group Chat"> Live Group Chat</label>
+    <label><input type="checkbox" name="feature" value="Event Countdown"> Event Countdown</label>
+    <label><input type="checkbox" name="feature" value="Custom Profiles"> Custom Profiles</label>
+    <label><input type="checkbox" name="feature" value="Photo Memories"> Photo Memories</label>
+    <button type="button" onclick="submitVote()">Submit</button>
+  </form>
+
+  <div id="voteResult"></div>
+</div>
+
+
+
+
+
+<section id="contact">
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <!-- About Section -->
+    <div class="footer-section">
+      <h3>About JNV Jalna</h3>
+      <p>
+        Jawahar Navodaya Vidyalaya, Jalna is a premier educational institution providing quality education to rural talented students of Maharashtra.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-section">
+      <h3>Contact Us</h3>
+      <p>📍 JNV Jalna, Maharashtra</p>
+      <p>📞 +91 7499974315</p>
+      <p>✉️ <a href="mailto:yeldodemayur334@gmail.com">yeldodemayur334@gmail.com</a></p>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 JNV Jalna | Made with ❤️ by Mayur </p>
+  </div>
+</footer>
+</section>
+
+
+  
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+  }
+
+  // Gallery Slider - Auto Slide + Arrows (Only 1 image visible at a time)
+
+const gallerySlider = document.getElementById('gallery-slider');
+const galleryTrack = document.getElementById('gallery-track');
+const gallerySlides = galleryTrack.querySelectorAll('.slide');
+const galleryPrev = document.getElementById('gallery-prev');
+const galleryNext = document.getElementById('gallery-next');
+
+let galleryIndex = 0;
+
+// Calculate slide width dynamically
+let gallerySlideWidth = gallerySlider.clientWidth;
+
+// Position slides correctly
+function updateGalleryPosition() {
+  galleryTrack.style.transform = `translateX(-${galleryIndex * gallerySlideWidth}px)`;
+}
+
+// Auto-slide every 3 seconds
+let galleryInterval = setInterval(() => {
+  galleryIndex = (galleryIndex + 1) % gallerySlides.length;
+  updateGalleryPosition();
+}, 3000);
+
+// Reset auto-slide if user interacts
+function resetGalleryAutoSlide() {
+  clearInterval(galleryInterval);
+  galleryInterval = setInterval(() => {
+    galleryIndex = (galleryIndex + 1) % gallerySlides.length;
+    updateGalleryPosition();
+  }, 3000);
+}
+
+// Next button click
+galleryNext.addEventListener('click', () => {
+  galleryIndex = (galleryIndex + 1) % gallerySlides.length;
+  updateGalleryPosition();
+  resetGalleryAutoSlide();
+});
+
+// Previous button click
+galleryPrev.addEventListener('click', () => {
+  galleryIndex = (galleryIndex - 1 + gallerySlides.length) % gallerySlides.length;
+  updateGalleryPosition();
+  resetGalleryAutoSlide();
+});
+
+// Recalculate slide width on window resize
+window.addEventListener('resize', () => {
+  gallerySlideWidth = gallerySlider.clientWidth;
+  updateGalleryPosition();
+});
+
+
+//chatbox
+
+const form = document.getElementById('guestbook-form');
+const nameInput = document.getElementById('guest-name');
+const messageInput = document.getElementById('guest-message');
+const messagesContainer = document.getElementById('guestbook-messages');
+
+// Load messages from localStorage on page load
+window.onload = () => {
+  const savedMessages = JSON.parse(localStorage.getItem('guestbookMessages')) || [];
+  savedMessages.forEach(addMessageToDOM);
+};
+
+// Handle form submit
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const name = nameInput.value.trim();
+  const message = messageInput.value.trim();
+
+  if (name && message) {
+    const msgObj = { name, message };
+    addMessageToDOM(msgObj);
+
+    // Save to localStorage
+    const saved = JSON.parse(localStorage.getItem('guestbookMessages')) || [];
+    saved.push(msgObj);
+    localStorage.setItem('guestbookMessages', JSON.stringify(saved));
+
+    // Clear input
+    nameInput.value = '';
+    messageInput.value = '';
+  }
+});
+
+function addMessageToDOM({ name, message }) {
+  const msgDiv = document.createElement('div');
+  msgDiv.className = 'guestbook-message';
+  msgDiv.innerHTML = `<strong>${name}:</strong> ${message}`;
+  messagesContainer.appendChild(msgDiv);
+}
+
+
+
+
+function submitVote() {
+  const checkboxes = document.querySelectorAll('input[name="feature"]:checked');
+  const selectedOptions = [];
+
+  checkboxes.forEach((checkbox) => {
+    selectedOptions.push(checkbox.value);
+  });
+
+  const result = document.getElementById('voteResult');
+  if (selectedOptions.length > 0) {
+    result.innerText = "✅ You voted for:\n" + selectedOptions.join(", ");
+  } else {
+    result.innerText = "⚠️ Please select at least one option.";
+  }
+}
+
+// Security check
+function logout() {
+      sessionStorage.removeItem("authenticated");
+      window.close();
+    }
+
+
+
+
+
+  function logout() {
+    sessionStorage.removeItem("authenticated");
+    localStorage.setItem("justLoggedOut", "true");
+    window.location.href = "login.html";
+  }
+
+
+</script>
+
+        
+</body>
+</html>
