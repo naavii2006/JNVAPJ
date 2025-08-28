@@ -1,0 +1,113 @@
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #e9eef2, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.login-box {
+    background: #ffffff;
+    padding: 48px 60px;
+    border-radius: 16px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    width: 100%;
+    max-width: 420px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+h2 {
+    color: #1b1f24;
+    margin-bottom: 28px;
+    font-size: 28px;
+    letter-spacing: 0.5px;
+}
+
+input {
+    width: 100%;
+    padding: 14px 18px;
+    margin: 12px 0;
+    border: 1px solid #cfd8dc;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #fafbfc;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    border-color: #00796b;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0,121,107,0.15);
+}
+
+button {
+    padding: 14px 26px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #00796b;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #00564c;
+    transform: scale(1.02);
+}
+
+#msg {
+    color: #d32f2f;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+/* Toast styling */
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    padding: 14px 24px;
+    position: fixed;
+    z-index: 1000;
+    top: 30px;
+    right: 30px;
+    font-size: 17px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transition: opacity 0.5s, top 0.5s;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+    top: 50px;
+}
+
+#logout-toast {
+    background-color: #f44336;
+}
+
+@media (max-width: 480px) {
+    .login-box {
+        padding: 36px 28px;
+        border-radius: 12px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}
