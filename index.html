@@ -4,94 +4,185 @@
   <meta charset="UTF-8" />
   <title>Login Page</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #e0f7fa, #f4f7fb);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
+      padding: 20px;
     }
 
     .login-box {
-      background: white;
-      padding: 40px 50px;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      padding: 50px 40px;
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
       text-align: center;
+      width: 100%;
+      max-width: 420px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .logo-section {
+      margin-bottom: 30px;
+    }
+
+    .logo-section img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     }
 
     h2 {
-      color: #00796b;
+      color: #1a202c;
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      letter-spacing: -0.025em;
+    }
+
+    .subtitle {
+      color: #64748b;
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+
+    .input-group {
+      position: relative;
       margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .input-group label {
+      display: block;
+      color: #374151;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 6px;
     }
 
     input {
       width: 100%;
-      padding: 12px 15px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 8px;
+      padding: 16px 18px;
+      border: 2px solid #e5e7eb;
+      border-radius: 12px;
       font-size: 16px;
+      font-family: inherit;
+      transition: all 0.2s ease;
+      background: white;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #667eea;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+
+    input::placeholder {
+      color: #9ca3af;
     }
 
     button {
-      padding: 12px 24px;
+      width: 100%;
+      padding: 16px 24px;
       font-size: 16px;
-      background-color: #00796b;
+      font-weight: 600;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       color: white;
       border: none;
-      border-radius: 8px;
+      border-radius: 12px;
       cursor: pointer;
-      transition: background 0.3s ease;
+      transition: all 0.3s ease;
+      margin-top: 10px;
     }
 
     button:hover {
-      background-color: #004d40;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(102, 126, 234, 0.3);
+    }
+
+    button:active {
+      transform: translateY(0);
     }
 
     #msg {
-      color: red;
-      margin-top: 10px;
+      color: #ef4444;
+      margin-top: 15px;
+      font-size: 14px;
+      font-weight: 500;
     }
 
     /* Toast styling */
     .toast {
       visibility: hidden;
-      min-width: 250px;
-      background-color: #4CAF50;
+      min-width: 320px;
+      background: rgba(34, 197, 94, 0.95);
+      backdrop-filter: blur(12px);
       color: white;
       text-align: center;
-      border-radius: 8px;
-      padding: 12px 20px;
+      border-radius: 16px;
+      padding: 16px 24px;
       position: fixed;
       z-index: 1000;
       top: 30px;
       right: 30px;
-      font-size: 17px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      font-size: 15px;
+      font-weight: 500;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
       opacity: 0;
-      transition: opacity 0.5s, top 0.5s;
+      transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .toast.show {
       visibility: visible;
       opacity: 1;
       top: 50px;
+      transform: scale(1);
     }
 
     #logout-toast {
-      background-color: #f44336; /* red for logout */
+      background: rgba(239, 68, 68, 0.95);
     }
   </style>
 </head>
 <body>
   <div class="login-box">
-    <h2>Login</h2>
-    <input type="text" id="username" placeholder="Username" required><br>
-    <input type="password" id="password" placeholder="Password" required><br>
-    <button onclick="login()">Login</button>
+    <div class="logo-section">
+      <img src="https://upload.wikimedia.org/wikipedia/en/8/82/Jawahar_Navodaya_Vidyalaya_logo.png" alt="JNV Logo">
+      <h2>Welcome Back</h2>
+      <p class="subtitle">JNV Jalna - Class of 2024</p>
+    </div>
+    
+    <form onsubmit="login(); return false;">
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter your username" required>
+      </div>
+      
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+      </div>
+      
+      <button type="submit">Sign In</button>
+    </form>
+    
     <p id="msg"></p>
   </div>
 
