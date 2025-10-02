@@ -2537,14 +2537,7 @@
     fullscreenBtn.addEventListener("click", toggleFullscreen);
 
     // Download functionality
-    downloadBtn.addEventListener("click", () => {
-      const link = document.createElement('a');
-      link.href = galleryImages[currentLightboxIndex];
-      link.download = `jnv-jalna-${currentLightboxIndex + 1}.jpg`;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    });
+   
 
     // Touch gestures for mobile
     let touchStartX = 0;
@@ -2661,3 +2654,4 @@
 </body>
 
 </html>
+
