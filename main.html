@@ -2231,10 +2231,10 @@
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script>
     // Security check
-    if (sessionStorage.getItem("authenticated") !== "true") {
-      alert("❌ Access Denied. Please login first.");
-      window.close();
-    }
+    // Simple redirect instead of aggressive blocking
+if (!sessionStorage.getItem("authenticated")) {
+  window.location.href = "index.html";
+}
 
     // Initialize particles.js
     particlesJS("particles-js", {
@@ -2654,4 +2654,5 @@
 </body>
 
 </html>
+
 
