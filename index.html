@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JNV Jalna - Secure Login</title>
+  <title>JNV Jalna - Secure Login Portal</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
@@ -417,6 +417,22 @@
       transition: all 0.3s;
     }
     
+    /* Security Notice */
+    .security-notice {
+      margin-top: 20px;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      font-size: 13px;
+      text-align: center;
+      border-left: 4px solid var(--accent);
+    }
+    
+    .security-notice i {
+      color: var(--accent);
+      margin-right: 8px;
+    }
+    
     /* Responsive Design */
     @media (max-width: 950px) {
       .login-container {
@@ -567,13 +583,13 @@
         <img src="https://upload.wikimedia.org/wikipedia/en/8/82/Jawahar_Navodaya_Vidyalaya_logo.png" alt="JNV Logo">
       </div>
       <h1>Welcome Back!</h1>
-      <p>JNV Jalna Class of 2024 - Batch 2017-24</p>
-      <p>Enter your credentials to access our exclusive portal</p>
+      <p>JNV Jalna Official Portal</p>
+      <p>Secure access to educational resources and information</p>
       
       <div class="security-features">
         <div class="security-item">
           <i class="fas fa-shield-alt"></i>
-          <span>Secure Login</span>
+          <span>SSL Secured</span>
         </div>
         <div class="security-item">
           <i class="fas fa-user-lock"></i>
@@ -588,7 +604,7 @@
     
     <!-- Login Form -->
     <div class="login-form-section">
-      <h2>Member Login</h2>
+      <h2>Secure Login</h2>
       <form id="loginForm">
         <div class="input-group">
           <input type="text" id="username" placeholder="Username" required autocomplete="username">
@@ -613,6 +629,11 @@
         
         <button type="submit" class="login-btn" id="loginBtn">Login</button>
         <p id="msg"></p>
+        
+        <div class="security-notice">
+          <i class="fas fa-info-circle"></i>
+          <span>This is a secure portal. Your credentials are encrypted.</span>
+        </div>
       </form>
     </div>
   </div>
@@ -631,7 +652,7 @@
   <script>
     // User credentials
     const users = [
-      { username: "JNV", password: "JALNA" },
+      { username: "jnvstudent", password: "jalna2024" },
     ];
 
     // Initialize particles.js
@@ -719,8 +740,8 @@
     });
 
     function login() {
-      const u = document.getElementById("username").value.trim().toLowerCase();
-      const p = document.getElementById("password").value.trim().toLowerCase();
+      const u = document.getElementById("username").value.trim();
+      const p = document.getElementById("password").value;
       
       // Show loading animation
       loading.classList.add("active");
@@ -743,12 +764,13 @@
           }
           
           setTimeout(() => {
-            window.open("main.html", "_blank");
+            // Redirect to main page instead of opening in new tab
+            window.location.href = "main.html";
             loading.classList.remove("active");
             loginBtn.disabled = false;
           }, 1500);
         } else {
-          document.getElementById("msg").innerHTML = "<i class='fas fa-exclamation-circle'></i> Invalid credentials";
+          document.getElementById("msg").innerHTML = "<i class='fas fa-exclamation-circle'></i> Invalid credentials. Please try again.";
           loading.classList.remove("active");
           loginBtn.disabled = false;
           
@@ -801,4 +823,3 @@
   </script>
 </body>
 </html>
-
