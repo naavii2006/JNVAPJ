@@ -2645,7 +2645,7 @@ if (!sessionStorage.getItem("authenticated")) {
     function logout() {
       sessionStorage.removeItem("authenticated");
       localStorage.setItem("justLoggedOut", "true");
-      window.location.href = "index.html";
+      // window.location.href = "index.html";
     }
 
     document.getElementById("logout-btn").addEventListener("click", logout);
@@ -2654,5 +2654,6 @@ if (!sessionStorage.getItem("authenticated")) {
 </body>
 
 </html>
+
 
 
